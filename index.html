@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="style.css">
-    <!--<script type="text/javascript" src="main.js"></script>-->
-    
     <title>Montoya and john</title>
 </head>
 
 <body>
     <!--Banner-->
-    <div class="banner">
-        <header>
+    <header>
+        <img src="img/fondo1.jpg">
+        <class class="conten-logo">
             <a href="#" class="logo">Montoya & John</a>
-            <div class="toggle"></div>
-        </header>
-        <img src="img/fondo2.jpg">
+        </class>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a  Class="About">About</a></li>
+                <li><a href="#page-3">Servicios</a></li>
+                <li><a href="#page-4">Tecnologias</a></li>
+                <li><a href="#Contactanos">Contactanos</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle"></div>
+
         <div class="content">
             <h2>Bienvenido</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
@@ -31,10 +39,32 @@
                 soluta blanditiis, reprehenderit adipisci?
             </p>
         </div>
-    </div>
-    
+    </header>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY > 1);
+        });
+
+        const navigation = document.querySelector('nav');
+
+        document.querySelector('.toggle').onclick = function () {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+            
+        }
+
+        document.querySelector('.About').onclick = function () {
+            window.scroll(0, 100);
+            
+        }
+
+    </script>
+
+
     <!--About-->
     <section class="about">
+        <scroll-page id="page-2"></scroll-page>
         <div class="contentBx">
             <h2 class="heading">Sobre nosotros</h2>
             <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -49,17 +79,7 @@
                 Totam illo consequatur ipsa accusantium odit perferendis, quis adipisci sunt obcaecati
                 vero illum eos beatae?
             </p>
-            
-            
-            <div class="developers">
-                <!--
-                <a href="#" class="A-btn"><span>John</span></a>
-                <a href="#" class="B-btn"><span>Montoya</span></a>
-                <script type="text/javascript" src="main.js"></script>
-                -->
-            </div>
         </div>
-        
 
         <div class="imgBx">
             <div class="A-card">
@@ -86,7 +106,10 @@
         </div>
     </section>
 
+    
+
     <!--Service-->
+    <scroll-page id="page-3"></scroll-page>
     <section class="services">
         <h2 class="heading">Nuestros servicios</h2>
         <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed aliquet dui, ac
@@ -139,6 +162,7 @@
     </section>
 
     <!--Technology-->
+    <scroll-page id="page-4"></scroll-page>
     <section class="technology">
         <div class="contentBx">
             <h2 class="heading">Utilizamos tecnología de punta</h2>
@@ -200,36 +224,31 @@
 
     <!--Contact-->
     <section class="contact">
-        <h2 class="heading">Contactanos</h2>
-        <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed aliquet dui, ac ultrices magna.
-            Vestibulum feugiat lacus vitae accumsan lobortis. Praesent pulvinar justo elit, vitae vestibulum neque
-            mattis ac.
-        </p>
+        <a name="Contactanos"></a>
+        <h2>Contactanos</h2>
 
-    </section>
-
-    <section class="about">
-        <div class="contentBx redbg">
-            <div class="form">
-                <div class="inputBx">
-                    <input type="text" name="" placeholder="Nombre completo">
-                </div>
-                <div class="inputBx">
-                    <input type="text" name="" placeholder="Correo electronico">
-                </div>
-                <div class="inputBx">
-                    <input type="text" name="" placeholder="Telefono">
-                </div>
-                <div class="inputBx">
-                    <textarea name="" id="" cols="20" rows="2" placeholder="Escribenos tus mensage aqui"></textarea>
-                </div>
-                <div class="inputBx">
-                    <input type="submit" value="Send">
+        <div class="c-about">
+            <div class="c-contentBx redbg">
+                <div class="form">
+                    <div class="inputBx">
+                        <input type="text" name="" placeholder="Nombre completo">
+                    </div>
+                    <div class="inputBx">
+                        <input type="text" name="" placeholder="Correo electronico">
+                    </div>
+                    <div class="inputBx">
+                        <input type="text" name="" placeholder="Telefono">
+                    </div>
+                    <div class="inputBx">
+                        <textarea name="" id="" cols="10" rows="2" placeholder="Escribenos tus mensage aqui"></textarea>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Send">
+                    </div>
                 </div>
             </div>
+            <div class="imgBx2"></div>
         </div>
-        <div class="imgBx2"></div>
     </section>
 
     <!--Footer-->
@@ -243,7 +262,5 @@
         </ul>
     </section>
 
-    
 </body>
-
 </html>

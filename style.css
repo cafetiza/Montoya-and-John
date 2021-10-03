@@ -7,81 +7,118 @@
     font-family:'Poppins',sans-serif;
 }
 
-.banner{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background:#465870;
-  display: flex;  
-  justify-content: center;
-  align-items: center;
-}
+header{
+    display: flex; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background:#465870;
+    transition: 0.5s;
+  }
 
-.banner img{
+header img{
     position:absolute;
     top:0;
     left:0;
     width: 100%;
     height:100%;
     object-fit: cover;
-    opacity:0.25;
+    opacity:0.7;
 }
 
-.banner .content{
+header .content{
     position: relative;
-    max-width:750px;
     text-align: center;
+    max-width:750px;
+    transition: 1s
 }
 
-.banner .content h2{
+header h2{
     color: #fff;
     font-size: 60px;
 }
 
-.banner header{
+header .conten-logo{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top:0;
     left: 0;
-    width: 100%;
-    padding: 40px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10000;
+    width: 27%;
+    padding: 25px;
 }
 
-.banner header .logo{
+.logo{
     color: #fff;
     text-decoration: none;
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-.banner header .toggle{
-    position: relative;
-    width:36px;
-    height: 28px;
-    background: url(img/toggle.png);
-    background-size: cover;
-    cursor: pointer;
+nav{
+    position: absolute;
+    display: flex;
+    left: 115vh;
+    width: 45%;
+    padding: 25px;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s
+}
+  
+nav ul li{
+    float: left;
+}
+  
+nav ul li a{
+    display: block;
+    text-align: center;
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #020202;
+}
+
+.sticky{
+    position: fixed;
+    height: 100px;
+    z-index: 100;
+}
+
+.sticky .content{
+    opacity: 0;
+}
+
+.sticky ul{
+    opacity: 1;
 }
 
 /*---------------------------------------- about --------------------------------*/
 /*Left*/
 .about{
-    position: relative;
-    width:100%;
-    height:800px;
     display: flex;
-
+    position: relative;
+    top: 2px;
+    width:100%;
+    height:900px;
 }
 
 .about .contentBx{
-    background: #162c3b;
-    padding:100px;
     width:50%;
+    padding: 200px 100px 50px 100px;
+    background: #162c3b;
 }
 
 .heading{
@@ -89,7 +126,7 @@
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom:10px ;
+    margin:100px 0 50px 0;
 }
 
 .text{
@@ -99,16 +136,6 @@
     letter-spacing: 1px;
 }
 
-.developers{
-    position: relative;
-    top: 4em;
-    height: 10em;
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    border: 1px solid #fff;
-}
-
 /*Right*/
 .about .imgBx{
     display:flex;
@@ -116,16 +143,16 @@
     justify-content:center;
     align-items:center;
     width:50%;
+    padding-top:200px;
 }
 
 .A-card{
-    position:relative;
-    width: 600px;
-    height: 350px;
-    /*background: #ccc;*/
-    border-radius: 20px;
     display: flex;
+    position:relative;
     align-items:center;
+    width: 500px;
+    height: 300px;
+    margin: 50px 0px 50px 0px;
     border-radius: 20px;
     transition: 0.5s;
 }
@@ -161,15 +188,15 @@
     position:absolute;
     top:50%;
     left:53%;
-    transform: translate(-50%,-50%);
     height: 300px;
     pointer-events: none;
+    transform: translate(-50%,-50%);
     transition: 0.5s;
 }
 
 .A-card:hover img{
     left: 72%;
-    height: 450px;
+    height: 350px;
 }
 
 .A-card .A-content{
@@ -217,7 +244,7 @@
 /*------------------------------------Services-----------------------------------*/
 .services{
     background:#12222d;
-    padding:100px;
+    padding:35px;
     text-align: center;
 }
 
@@ -294,12 +321,14 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+
 /*--------------------------------tecnologias----------------------------------*/
 .technology{
     background:#3f8ffc;
     width: 100%;
+    height: 138vh;
     padding:100px;
-    padding-top: 300px;
+    padding-top: 250px;
     margin-top: -300px;
     display: flex;
     justify-content: space-between;
@@ -319,6 +348,7 @@
 }
 
 /*--------------------------------clientes-------------------------------------*/
+/*
 .client{
     background: #162c3b;
     padding:100px;
@@ -343,8 +373,9 @@
 
 .client .imgBx img:hover{
     opacity: 1;
-}
+}*/
 /*--------------------------------Testimonios-----------------------------------*/
+/*
 .testimonials{
     position: relative;
     padding:100px;
@@ -381,21 +412,41 @@
     font-weight: 500;
     color: #3f8ffc;
 }
-
+*/
 /*--------------------------------Contact Us-----------------------------------*/
 .contact{
-    padding:100px;
+    height: 650px;
+    padding:1px;
     background: #162c3b;
     text-align: center;
 }
 
-.imgBx2{
-    background:url(img/fondo1.jpg);
-    background-size: cover;
-    background-position: center;
-    width:50%;
+.contact h2{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin:50px 0 20px 0;
 }
 
+.c-about{
+    display: flex;
+    position: relative;
+    left: 10%;
+    width:80%;
+    height:540px;
+    border-radius: 20px;
+}
+
+.c-about .c-contentBx{
+    width:50%;
+    height: 530px;
+    padding: 50px 100px 0px 100px;
+    border-radius: 60px 0px 0px 60px;
+    background: #162c3b;
+}
+
+/*Left*/
 .redbg{
     background:url(img/red.jpg) !important;
     background-size: cover;
@@ -408,14 +459,14 @@
 
 .form .inputBx input{
     width: 100%;
+    padding: 10px 0;
+    color:#fff;
     background: transparent;
     box-shadow: none;
     border: none;
     outline:none;
-    padding: 10px 0;
     font-size:18px;
     font-weight:300;
-    color:#fff;
     border-bottom:2px solid #fff;
 }
 
@@ -426,16 +477,19 @@
 
 .form .inputBx textarea{
     width: 100%;
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    outline:none;
+    min-height: 50px;
     padding: 10px 0;
+
+    color:#fff;
+    background: transparent;
+    
+    border: none;
+    border-bottom:2px solid #fff;
+    box-shadow: none;
+    outline:none;
+    
     font-size:18px;
     font-weight:300;
-    color:#fff;
-    min-height: 150px;
-    border-bottom:2px solid #fff;
 }
 
 .form .inputBx textarea::placeholder
@@ -445,22 +499,35 @@
 
 .form .inputBx input[type="submit"]{
     width:150px;
-    background:#fff;
     color:#111;
+    background:#fff;
     cursor: pointer;
     font-weight: 400px;
 }
 
+/*Right*/
+.imgBx2{
+    width:50%;
+    height:530px;
+    background:url(img/fondoU.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px 60px 60px 0px;
+}
+
+/*bootm*/
 .footer{
-    background:#162c3b;
-    padding: 20px 100px;
     display: flex;
+
+    padding: 20px 100px;
+    background:#162c3b;
     justify-content: space-between;
     align-items: center;
 }
 
 .footer ul{
     display: flex;
+    
     justify-content:center;
     align-items: center;
 }
@@ -470,109 +537,17 @@
 }
 
 .footer ul li a{
+    margin: 0 10px;
     text-decoration: none;
     display:inline-block;
-    margin: 0 10px;
 }
 
 .footer ul li a img{
-    filter: invert(1);
     max-width:20px;
+    filter: invert(1);
 }
 
-
-
-@media (max-width: 991px){
-    .banner{
-        padding:50px;
-    }
-    .banner header{
-        padding: 20px 50px;
-    }
-    .banner .content h2{
-        font-size: 36px;
-    }
-    .banner .content p{
-        color: #fff;
-        font-size: 16px;
-    }
-    .about{
-        flex-direction: column;
-    }
-
-    .about .contentBx,
-    .about .contentBx{
-        width:100%;
-        padding: 50px;
-        min-height: 400px;
-        text-align:center;
-    }
-
-    .services{
-        padding: 50px;
-    }
-    .services .container{
-        justify-content:center;
-        margin-top: 20px;
-    }
-    .service .container .serviceBx{
-        margin: 20px;
-        width: 300px;
-        height: 350px;
-    }
-
-    .serviceBx{
-        margin: 20px;
-    }
-
-    .technology{
-        padding: 50px;
-        padding-top: 300px;
-        justify-content:center;
-        flex-direction: column;
-
-    }
-
-    .technology .imgBx{
-        margin-top:40px;
-        max-width:250px
-    }
-
-    .client{
-        padding: 50px;
-    }
-
-    .client .imgBx{
-        justify-content: center;
-    }
-
-    .testimonials{
-        padding: 50px;
-    }
-
-    .testimonials .contentBx{
-        padding: 60px 40px;
-        max-width: 550px;
-        margin-bottom: 40px;
-    }
-
-    .testimonials .contentBx:last-child{
-        margin-bottom: 0px;
-    }
-
-    .contact{
-        padding: 50px;
-    }
-
-    .footer{
-        padding: 20px 50px;
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-
-    .footer ul{
-        margin-bottom:20px;
-    }
-
+/*Suaviza el scroll*/
+html{
+    scroll-behavior: smooth;
 }
